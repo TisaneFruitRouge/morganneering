@@ -1,0 +1,4 @@
+#burger:hover > span:nth-child(2),
+#burger:hover > span:nth-child(3) {
+    width: 2rem;
+}
