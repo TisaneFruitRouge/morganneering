@@ -6,13 +6,15 @@ import Navbar from '@/app/components/Navbar';
 const averia = Averia_Serif_Libre({ weight: "400", preload: false});
 const ribeye = Ribeye({ weight: "400", preload: false});
 
+const PRODUCTION_WEBSITE_URL = "https://morganneering.vercel.app/"
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.morganneering.com'),
+  metadataBase: new URL(PRODUCTION_WEBSITE_URL),
   title: 'Morgan Neering',
   description: 'Welcome to Morgan\'s official website!',
   authors: {
     name: "Morgan Neering",
-    url: "https://www.morganneering.com"
+    url: PRODUCTION_WEBSITE_URL
   },
   creator: "Chilling Con Carne - chillingconcarne.co",
   keywords: ["poetry", "self-discovery", "nostalgia"],
@@ -23,11 +25,11 @@ export const metadata: Metadata = {
     emails: "morganneering@gmail.com",
     locale: "en-US",
     images: "/morgan.png",
-    url: "https://www.morganneering.com",
+    url: PRODUCTION_WEBSITE_URL,
     countryName: "United States of America"
   },
   twitter: {
-    site: "https://www.morganneering.com",
+    site: PRODUCTION_WEBSITE_URL,
     title: "Morgan Neering",
     description: "Welcome to Morgan's official website!",
     images: "/morgan.png"
