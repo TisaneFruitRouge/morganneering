@@ -1,5 +1,5 @@
 export type Poem = {
-    content: string;
+    content: {text: string};
     createdAt: string;
     id: string;
     magazine: string;

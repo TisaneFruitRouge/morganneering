@@ -31,7 +31,7 @@ export default function PoemSlider({poems}: PoemSliderProps) {
     }, [currentPage]);
 
     return (
-        <div className="">
+        <div>
             <ol className="text-3xl flex flex-col gap-12">
                 {currentPoems.map(poem => (
                     <li key={poem.id} className="hover:underline">

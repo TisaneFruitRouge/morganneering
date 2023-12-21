@@ -19,7 +19,7 @@ export const GET_POEMS = gql`
 export const GET_POEM_BY_ID = gql`
   query GetPoemById($id: ID!) {
     poem(where: { id: $id }) {
-        content
+        content{text}
         createdAt
         id
         magazine

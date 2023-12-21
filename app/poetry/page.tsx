@@ -12,9 +12,13 @@ export default async function Poetry() {
 
     const poems:Poem[] = data.poems ?? [];
 
+    const sortPoems = (a: Poem, b: Poem) => a.title < b.title ? -1 : 1;
+
+    const sortedPoems = [...poems].sort(sortPoems);
+
     return (
         <section className="mt-12">
-            <PoemSlider poems={poems} />
+            <PoemSlider poems={sortedPoems} />
         </section>
     )
 }
