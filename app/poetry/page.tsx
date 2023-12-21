@@ -10,9 +10,11 @@ export default async function Poetry() {
         query: GET_POEMS
     })
 
-    const poems:Poem[] = data.poems ?? [];
+    type PoemWithoutContent = Omit<Poem, "content">;
 
-    const sortPoems = (a: Poem, b: Poem) => a.title < b.title ? -1 : 1;
+    const poems:PoemWithoutContent[] = data.poems ?? [];
+
+    const sortPoems = (a: PoemWithoutContent, b: PoemWithoutContent) => a.title < b.title ? -1 : 1;
 
     const sortedPoems = [...poems].sort(sortPoems);
 

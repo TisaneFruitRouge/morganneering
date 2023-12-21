@@ -3,7 +3,6 @@ import { gql } from '@apollo/client';
 export const GET_POEMS = gql`
     query Poems {
         poems {
-            content
             createdAt
             id
             magazine

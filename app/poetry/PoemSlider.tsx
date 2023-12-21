@@ -5,8 +5,10 @@ import { useSearchParams } from 'next/navigation'
 
 import { Poem } from "../types";
 
+type PoemWithoutContent = Omit<Poem, "content">;
+
 interface PoemSliderProps {
-    poems: Poem[];
+    poems: PoemWithoutContent[];
 }
 
 export default function PoemSlider({poems}: PoemSliderProps) {
@@ -39,9 +41,9 @@ export default function PoemSlider({poems}: PoemSliderProps) {
                     </li>
                 ))}
             </ol>
-            <div className="fixed bottom-16 right-16 text-3xl">
-                {currentPage < (poems.length % 4) + 1 && <button className="hover:underline" onClick={() => setCurrentPage(currentPage + 1)}>next page</button>}
-                {currentPage > 1 && <button className="hover:underline" onClick={() => setCurrentPage(currentPage - 1)}>previous page</button>}
+            <div className="fixed bottom-16 right-16 text-3xl flex flex-col gap-2 items-end">
+                {<button className={`hover:underline ${currentPage < (poems.length % 4) + 1 ? 'visible' : 'invisible'}`} onClick={() => setCurrentPage(currentPage + 1)}>next page</button>}
+                {<button className={`hover:underline ${currentPage > 1 ? 'visible' : 'invisible'}`} onClick={() => setCurrentPage(currentPage - 1)}>previous page</button>}
             </div>
         </div>
     )
