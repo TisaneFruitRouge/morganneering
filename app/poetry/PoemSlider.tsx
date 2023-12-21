@@ -42,7 +42,7 @@ export default function PoemSlider({poems}: PoemSliderProps) {
                 ))}
             </ol>
             <div className="fixed bottom-16 right-16 text-3xl flex flex-col gap-2 items-end">
-                {<button className={`hover:underline ${currentPage < (poems.length % 4) + 1 ? 'visible' : 'invisible'}`} onClick={() => setCurrentPage(currentPage + 1)}>next page</button>}
+                {<button className={`hover:underline ${currentPage <= (Math.floor(poems.length / 4)) ? 'visible' : 'invisible'}`} onClick={() => setCurrentPage(currentPage + 1)}>next page</button>}
                 {<button className={`hover:underline ${currentPage > 1 ? 'visible' : 'invisible'}`} onClick={() => setCurrentPage(currentPage - 1)}>previous page</button>}
             </div>
         </div>

@@ -7,8 +7,31 @@ const averia = Averia_Serif_Libre({ weight: "400", preload: false});
 const ribeye = Ribeye({ weight: "400", preload: false});
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.morganneering.com'),
   title: 'Morgan Neering',
-  description: 'Morgan Neering official\'s webiste',
+  description: 'Welcome to Morgan\'s official website!',
+  authors: {
+    name: "Morgan Neering",
+    url: "https://www.morganneering.com"
+  },
+  creator: "Chilling Con Carne - chillingconcarne.co",
+  keywords: ["poetry", "self-discovery", "nostalgia"],
+  openGraph: {
+    type: "website",
+    title: "Morgan NEERING",
+    description: "Welcome to Morgan's official website!",
+    emails: "morganneering@gmail.com",
+    locale: "en-US",
+    images: "/morgan.png",
+    url: "https://www.morganneering.com",
+    countryName: "United States of America"
+  },
+  twitter: {
+    site: "https://www.morganneering.com",
+    title: "Morgan Neering",
+    description: "Welcome to Morgan's official website!",
+    images: "/morgan.png"
+  }
 }
 
 export default function RootLayout({
