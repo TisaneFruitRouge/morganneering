@@ -6,7 +6,7 @@ import Navbar from '@/app/components/Navbar';
 const averia = Averia_Serif_Libre({ weight: "400", preload: false});
 const ribeye = Ribeye({ weight: "400", preload: false});
 
-const PRODUCTION_WEBSITE_URL = "https://morganneering.vercel.app/"
+const PRODUCTION_WEBSITE_URL = "https://www.morganneering.com"
 
 export const metadata: Metadata = {
   metadataBase: new URL(PRODUCTION_WEBSITE_URL),

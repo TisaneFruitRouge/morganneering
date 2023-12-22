@@ -16,7 +16,7 @@ export default function Navbar() {
                 {isPoemPage ? 
                     <a className="hover:underline w-32 text-center" href="/poetry">back to poetry</a> :
                     <>
-                        <a className="hover:underline" href="/poetry">poerty</a>
+                        <a className="hover:underline" href="/poetry">poetry</a>
                         <a className="hover:underline" href="/about">about</a>
                         <a className="hover:underline" href="/contact">contact</a>
                     </>
@@ -31,7 +31,7 @@ export default function Navbar() {
                 {isPoemPage ? 
                     <a className="hover:underlin w-32 text-center" href="/poetry">back to poetry</a> :
                     <>
-                        <a className="hover:underline" href="/poetry">poerty</a>
+                        <a className="hover:underline" href="/poetry">poetry</a>
                         <a className="hover:underline" href="/about">about</a>
                         <a className="hover:underline" href="/contact">contact</a>
                     </>
