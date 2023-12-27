@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Averia_Serif_Libre, Ribeye } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/app/components/Navbar';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const averia = Averia_Serif_Libre({ weight: "400", preload: false});
 const ribeye = Ribeye({ weight: "400", preload: false});
@@ -51,6 +52,7 @@ export default function RootLayout({
           </section>
           <Navbar />
         </main>
+        <SpeedInsights />
       </body>
     </html>
   )
