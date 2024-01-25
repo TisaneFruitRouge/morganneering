@@ -13,7 +13,7 @@ export default function Contact() {
             <div className="flex flex-col gap-8">
                 <h2 className={"text-2xl md:text-4xl " + style_script}>Socials</h2>
                 <ol className="flex flex-col gap-6">
-                    <li>instagram @mneering</li>
+                    <li><a href='https://www.instagram.com/mneering/'>instagram @mneering</a></li>
                 </ol>
             </div>
         </section>
